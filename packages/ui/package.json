@@ -1,23 +1,29 @@
 {
-  "name": "@repo/ui",
+  "name": "@rocketproject/ui",
   "author": {
     "name": "Henrik Thorøe",
     "email": "henrik@thoroee.com",
     "url": "https://github.com/HenrikThoroe"
   },
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.8",
   "type": "module",
-  "main": "dist/index.cjs.js",
+  "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "files": [
     "/dist"
   ],
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "storybook": "storybook dev -p 6006",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "prepublishOnly": "yarn build"
   },
   "devDependencies": {
@@ -63,5 +69,12 @@
     "classnames": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
+  },
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
