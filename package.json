@@ -6,15 +6,17 @@
     "dev": "turbo dev",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "storybook": "turbo storybook"
+    "storybook": "turbo storybook",
+    "publish-packages": "turbo lint build && changeset version && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.3",
+    "@eslint/eslintrc": "^3.1.0",
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
-    "@typescript-eslint/eslint-plugin": "^7.9.0",
-    "@typescript-eslint/parser": "^7.9.0",
-    "eslint": "^9.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.10.0",
+    "@typescript-eslint/parser": "^7.10.0",
+    "eslint": "8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-config-turbo": "^1.13.3",
