@@ -1,0 +1,36 @@
+{
+  "name": "@rocketproject/wss",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Henrik Thorøe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenrikThoroe/rocketproject.git",
+    "directory": "packages/wss"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "yarn build --watch",
+    "prepublish": "yarn build",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@types/ws": "^8.5.10",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@rocketproject/api-schema": "*",
+    "@rocketproject/metrics": "*",
+    "http": "^0.0.1-security",
+    "ws": "^8.17.0",
+    "zod": "^3.23.8"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@rocketproject/metrics",
+  "version": "0.0.0",
+  "main": "src/index.ts",
+  "author": "Henrik Thoroe",
+  "license": "GPL-3.0-or-later",
+  "private": true,
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "prom-client": "^15.1.2",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*"
+  }
+}

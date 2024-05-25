@@ -1,0 +1,33 @@
+{
+  "name": "@rocketproject/env-util",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Henrik Thorøe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenrikThoroe/rocketproject.git",
+    "directory": "packages/env-util"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "yarn build --watch",
+    "prepublish": "yarn build",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "@types/eslint": "^8.56.10",
+    "eslint": "8.57.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@next/env": "^14.2.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

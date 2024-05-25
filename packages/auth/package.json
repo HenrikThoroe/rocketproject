@@ -1,0 +1,35 @@
+{
+  "name": "@rocketproject/auth",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Henrik Thorøe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenrikThoroe/rocketproject.git",
+    "directory": "packages/auth"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "yarn build --watch",
+    "prepublish": "yarn build",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@rocketproject/api-schema": "*",
+    "@supabase/supabase-js": "^2.43.4",
+    "express": "^4.19.2",
+    "jose": "^5.3.0",
+    "moment": "^2.30.1"
+  }
+}
