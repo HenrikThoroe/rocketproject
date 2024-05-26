@@ -7,7 +7,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "storybook": "turbo storybook",
-    "publish-packages": "turbo lint build && changeset version && changeset publish"
+    "publish-packages": "turbo lint build && changeset version && turbo publish-package"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.3",

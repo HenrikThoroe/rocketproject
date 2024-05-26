@@ -5,7 +5,7 @@
     "email": "henrik@thoroee.com",
     "url": "https://github.com/HenrikThoroe"
   },
-  "version": "0.2.0",
+  "version": "0.2.1",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -24,7 +24,8 @@
     "lint": "eslint .",
     "storybook": "storybook dev -p 6006",
     "build": "tsc && vite build",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "yarn build",
+    "publish-package": "yarn npm publish"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.4.0",

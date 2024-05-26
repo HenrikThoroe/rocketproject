@@ -17,6 +17,10 @@
     "storybook": {
       "cache": false,
       "persistent": true
+    },
+    "publish-package": {
+      "dependsOn": ["^lint", "^build"],
+      "cache": false
     }
   }
 }

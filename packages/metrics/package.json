@@ -1,12 +1,25 @@
 {
   "name": "@rocketproject/metrics",
-  "version": "0.0.0",
-  "main": "src/index.ts",
-  "author": "Henrik Thoroe",
-  "license": "GPL-3.0-or-later",
-  "private": true,
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Henrik Thorøe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenrikThoroe/rocketproject.git",
+    "directory": "packages/metrics"
+  },
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "lint": "eslint ."
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "yarn build --watch",
+    "prepublish": "yarn build",
+    "lint": "eslint .",
+    "publish-package": "yarn npm publish"
   },
   "dependencies": {
     "express": "^4.19.2",
@@ -15,6 +28,7 @@
     "winston-daily-rotate-file": "^5.0.0"
   },
   "devDependencies": {
-    "eslint-config-custom": "*"
+    "eslint-config": "*",
+    "tsup": "^8.0.2"
   }
 }
