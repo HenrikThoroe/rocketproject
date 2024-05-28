@@ -1,4 +1,4 @@
-# KV Store
+# Key Value Storage
 
 The `kv-store` package allows for type safe usage of a key-value storage solutions.
 Values can have different types like string, bitset, JSON, etc.
@@ -8,7 +8,7 @@ for JSON validation.
 The store can follow different persistence strategies. For now, the package supports Redis
 and in-memory storage.
 
-## Usage
+## Example Usage
 
 ```ts
 import { z } from 'zod'
@@ -56,14 +56,13 @@ await store
 
 `StaticStore` allows to create a store that accepts a pre-defined set of keys, each with a fixed and unique type.
 
-`DynamicStore` acts like a fixed-type array. Where any string key is accepted but all keys resolve to the
+`DynamicStore` acts like a fixed-type array. Where any string key is accepted, but all keys resolve to the
 same type.
 
 Static and dynamic stores can be nested as required. There are no limitations.
 The set of types will probably be expanded to support the full range of native Redis
-types and probably even more (JSON is a non native implementation).
+types and probably even more (JSON is a non-native implementation).
 
-Please see [fields](https://github.com/HenrikThoroe/ivy-backend/tree/main/packages/kv-store/src/fields),
-[stores](https://github.com/HenrikThoroe/ivy-backend/tree/main/packages/kv-store/src/stores) and
-[schemas](https://github.com/HenrikThoroe/ivy-backend/tree/main/packages/kv-store/src/schemas) for an in-detail documentation.
-The source code is well documented and the API is intuitive.
+Please see [fields](https://github.com/HenrikThoroe/rocketproject/tree/main/packages/kv-store/src/fields) and
+[stores](https://github.com/HenrikThoroe/rocketproject/tree/main/packages/kv-store/src/stores) for an in-detail documentation.
+The source code is well documented, and the API is intuitive.

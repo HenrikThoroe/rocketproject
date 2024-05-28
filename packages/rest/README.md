@@ -1,21 +1,21 @@
-# REST Package
+# REST
 
-The `rest` package provides an internal library for creating REST-full or REST-like typesafe HTTP APIs.
-It is meant to provide a convinient typesafe layer above `express` routers which is backward compatible
+The `@rocketproject/rest` package provides a library for creating REST-full or REST-like type safe HTTP APIs.
+It is meant to provide a convenient type safe layer above `express` routers which is backward compatible
 to existing plain express infrastructure.
 
-The types rely on another internal `api-schema` package.
-This library can take those schemas and easily allow to add logic to the already defined
+The types rely on the `@rocketproject/api-schema` package.
+This library can take those schemas and easily allow adding logic to the already defined
 endpoints while preserving type safety.
 
-## Usage
+## Example Usage
 
 ```ts
 // mySchema is imported from the `api-schema` package
 const myRouter = router(mySchema, {
-  // 'foo' is not arbitrary. 'foo' has been defined as endpoint
+  // 'foo' is not arbitrary. 'foo' has been defined as an endpoint
   // in `mySchema`. 'foo's input and output types have been defined by
-  // `my-schema` as well and are also typesafe.
+  // `mySchema` as well and are also typesafe.
   // You will get full code-completion on the required properties
   // as TS knows about the endpoints defined in `mySchema`.
   foo: async ({ body, query, params }, success, failure) => {

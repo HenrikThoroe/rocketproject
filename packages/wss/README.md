@@ -1,15 +1,14 @@
 # Web Socket Server
 
-The `wss` package provides an internal library for easily creating new ws servers.
-Servers are created using schemas found in the `@ivy-chess/api-schema` package
-and an implementation for each incoming message type.
+The `@rocketproject/wss` package provides a library for easily creating new web socket servers.
+Servers are created using `zod` schemas and an implementation for each incoming message type.
 
-The `wss` package allows for managing state for the server and each connection.
+The `@rocketproject/wss` package allows for managing state for the server and each connection.
 
-## Usage
+## Example Usage
 
 ```ts
-import { schema } from '@ivy-chess/api-schema'
+import { schema } from '<model>'
 
 // State that will be passed to the implementation. Unique for each server instance.
 const serverState = new ServerState()

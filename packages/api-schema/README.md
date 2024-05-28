@@ -1,30 +1,28 @@
 # API Schema
 
-The `@ivy-chess/api-schema` package provides type
-definitions for all external APIs exposed by the
-[Ivy Backend Project](https://github.com/HenrikThoroe/ivy-backend).
+A library for defining HTTP endpoints. Endpoints are configured with `zod` schemas for their parameters, bodies, query, etc. and
+optional authentication and authorization options. Endpoints are grouped in routes, which then can be implemented by the `@rocketproject/rest` library.
 
-Types in this package are used for HTTP endpoints and WebSocket interfaces.
+## Example Usage
 
-For server side usage see [rest](https://github.com/HenrikThoroe/ivy-backend/tree/main/packages/rest)
-and [wss](https://github.com/HenrikThoroe/ivy-backend/tree/main/packages/wss).
+```ts
+import { z } from 'zod'
+import { route, endpoint } from '@rocketproject/api-schema'
+import { userSchema } from '<model>'
 
-## Installation
+const userFilterSchema = z.object({
+  name: z.string().min(1).max(10),
+  age: z.coerce.number().positive(),
+})
 
-```sh
-yarn add @ivy-chess/api-schema
+export const sampleRoute = route('/users', {
+  all: endpoint('/', 'GET').unprotected().success(z.array(z.string())),
+  find: endpoint('/', 'GET').unprotected().query(userFilterSchema).success(userSchema),
+  add: endpoint('/', 'POST').unprotected().body(userSchema).success(userSchema),
+  remove: endpoint('/:id', 'DELETE')
+    .protected()
+    .access('admin', 'moderator')
+    .params(z.object({ id: z.string() }))
+    .success(z.object({ success: z.literal(true) })),
+})
 ```
-
-## Building
-
-```sh
-yarn build
-
-# Or for automatic rebuilds on file change
-yarn dev
-```
-
-## License
-
-The package is part of the [Ivy Backend Project](https://github.com/HenrikThoroe/ivy-backend)
-and therefore licensed under GPLv3. Please see the linked repository for more information.

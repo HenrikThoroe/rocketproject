@@ -1,81 +1,77 @@
-# Turborepo starter
+<h1 align="center">Rocketproject</h1>
 
-This is an official starter Turborepo.
+<p align="center">
+    <img alt="GitHub" style="padding: 10px" src="https://img.shields.io/github/license/HenrikThoroe/rocketproject?style=for-the-badge">
+    <img alt="ESLint" style="padding: 10px" src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=for-the-badge">
+    <img alt="Prettier" style="padding: 10px" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=for-the-badge">
+</p>
 
-## Using this example
+<p align="center"><i>Everything to spin up your side projects. Fast!</i></p>
 
-Run the following command:
+# 🚀 Introduction
+
+A set of tools to quickly spin up your NodeJS + React applications.
+The mono-repo includes a wide variety of backend libraries and a set of React components.
+All libraries have been developed to make the development process of my side projects
+faster and more enjoyable. The focus is on abstracting all the boring stuff and providing absolute
+type safety. So what is included?
+
+- `api-schema`
+  - A library for configuring a schema for REST-like web APIs
+  - Allows to quickly define all types of parameters and responses
+  - Supports configuring authentication and authorization per endpoint
+- `auth`
+  - Tools for easy integration of auth providers into the `rest` package
+  - Allows to use Supabase but could be trivially expanded for other providers
+- `env-util`
+  - Small tool to use NextJS style .env files in your custom Node applications
+- `kv-store`
+  - Type-safe and schema based accessor for Redis
+  - Allows simulating a Redis store in memory for local testing
+  - Could easily be expanded to support other key-value storage solutions
+- `metrics`
+  - Convenient tool set for everything metric related
+  - easy integration into `rest` and `wss` package for convenient logging of all requests
+- `rest`
+  - An express wrapper to implement schemas defined using the `api-schema` package
+  - Takes care of all the heavy lifting and lets you focus on the logic
+  - Automatically verifies the parameters and responses for each request
+  - Only allows requests that meet the authentication and authorization requirements
+- `ui`
+  - Set of react components that happened to be used throughout some of my projects
+- `wss`
+  - Type-safe and schema based web socket server
+  - Allows session based web socket servers that only allow type-safe messages
+  - Easy to spin up
+  - State management included
+
+# 🔥 Getting Started
+
+## Install Prerequisites
+
+- [Docker](https://www.docker.com/products/docker-desktop/)
+- [NodeJS](https://nodejs.org/en/download) (v18.12+, recommended v20+)
+- [Yarn](https://yarnpkg.com/getting-started/install) (v4+ is required. Use `yarn set version stable`)
+
+## Setup Dev Environment
 
 ```sh
-npx create-turbo@latest
+# Start external services
+docker compose up
+
+# Install dependencies
+yarn install
+
+# Run linter
+yarn lint
+
+# Build packages
+yarn build
+
+# Publish packages (access token or OTP required)
+yarn publish-packages
 ```
 
-## What's inside?
+# 🧑‍⚖️ License
 
-This Turborepo includes the following packages/apps:
-
-### Apps and Packages
-
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
-
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
-
-### Utilities
-
-This Turborepo has some additional tools already setup for you:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-
-### Build
-
-To build all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm build
-```
-
-### Develop
-
-To develop all apps and packages, run the following command:
-
-```
-cd my-turborepo
-pnpm dev
-```
-
-### Remote Caching
-
-Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
-
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
-
-```
-cd my-turborepo
-npx turbo login
-```
-
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
-
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
-
-```
-npx turbo link
-```
-
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+MIT
