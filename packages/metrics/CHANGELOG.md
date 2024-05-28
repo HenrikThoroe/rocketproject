@@ -1,5 +1,11 @@
 # @rocketproject/metrics
 
+## 0.0.2
+
+### Patch Changes
+
+- Documentation Patch
+
 ## 0.0.1
 
 ### Patch Changes

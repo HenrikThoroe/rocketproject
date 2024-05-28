@@ -1,5 +1,11 @@
 # @rocketproject/ui
 
+## 0.2.2
+
+### Patch Changes
+
+- Documentation Patch
+
 ## 0.2.1
 
 ### Patch Changes
