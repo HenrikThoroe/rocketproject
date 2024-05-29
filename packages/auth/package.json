@@ -1,6 +1,6 @@
 {
   "name": "@rocketproject/auth",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
@@ -27,7 +27,7 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@rocketproject/api-schema": "*",
+    "@rocketproject/api-schema": "latest",
     "@supabase/supabase-js": "^2.43.4",
     "express": "^4.19.2",
     "jose": "^5.3.0",

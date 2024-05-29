@@ -1,6 +1,6 @@
 {
   "name": "@rocketproject/wss",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
@@ -28,8 +28,8 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@rocketproject/api-schema": "*",
-    "@rocketproject/metrics": "*",
+    "@rocketproject/api-schema": "latest",
+    "@rocketproject/metrics": "latest",
     "http": "^0.0.1-security",
     "ws": "^8.17.0",
     "zod": "^3.23.8"

@@ -1,6 +1,6 @@
 {
   "name": "@rocketproject/rest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
@@ -22,9 +22,9 @@
     "publish-package": "yarn npm publish"
   },
   "dependencies": {
-    "@rocketproject/api-schema": "*",
-    "@rocketproject/auth": "*",
-    "@rocketproject/metrics": "*",
+    "@rocketproject/api-schema": "latest",
+    "@rocketproject/auth": "latest",
+    "@rocketproject/metrics": "latest",
     "express": "^4.19.2",
     "express-fileupload": "^1.5.0",
     "zod": "^3.23.8"
