@@ -3736,7 +3736,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rocketproject/api-schema@npm:*, @rocketproject/api-schema@workspace:packages/api-schema":
+"@rocketproject/api-schema@npm:latest":
+  version: 0.0.2
+  resolution: "@rocketproject/api-schema@npm:0.0.2"
+  dependencies:
+    zod: "npm:^3.23.8"
+  checksum: 10/f88adeec14d1191567db0a01c021daa830c264511648e66a20e784e0d6336772eef5f08f3d2e69132a2de7372bd04c977556500a870943976b35b1bcfbf4242d
+  languageName: node
+  linkType: hard
+
+"@rocketproject/api-schema@workspace:packages/api-schema":
   version: 0.0.0-use.local
   resolution: "@rocketproject/api-schema@workspace:packages/api-schema"
   dependencies:
@@ -3747,11 +3756,24 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rocketproject/auth@npm:*, @rocketproject/auth@workspace:packages/auth":
+"@rocketproject/auth@npm:latest":
+  version: 0.0.3
+  resolution: "@rocketproject/auth@npm:0.0.3"
+  dependencies:
+    "@rocketproject/api-schema": "npm:latest"
+    "@supabase/supabase-js": "npm:^2.43.4"
+    express: "npm:^4.19.2"
+    jose: "npm:^5.3.0"
+    moment: "npm:^2.30.1"
+  checksum: 10/d4057a1f797d71fcf9cba5de66519c2efbe6767df92eb7ad6c1ec8b8d8c60de51259acc4b229c9ca02c0c10816cae33f45bbd0e4ed0f6985940967a2b947719d
+  languageName: node
+  linkType: hard
+
+"@rocketproject/auth@workspace:packages/auth":
   version: 0.0.0-use.local
   resolution: "@rocketproject/auth@workspace:packages/auth"
   dependencies:
-    "@rocketproject/api-schema": "npm:*"
+    "@rocketproject/api-schema": "npm:latest"
     "@supabase/supabase-js": "npm:^2.43.4"
     eslint-config-custom: "npm:*"
     express: "npm:^4.19.2"
@@ -3762,7 +3784,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rocketproject/env-util@npm:*, @rocketproject/env-util@workspace:packages/env-util":
+"@rocketproject/env-util@npm:latest":
+  version: 0.0.2
+  resolution: "@rocketproject/env-util@npm:0.0.2"
+  dependencies:
+    "@next/env": "npm:^14.2.3"
+  checksum: 10/78f6c97efee3f78897574d31b900326a20a8a9e89fb15d669e67c2db8bab7741ca324e10b3b7598d285380bf0e444d9a187088bc0a9d1e28b2a04e15a52e83f4
+  languageName: node
+  linkType: hard
+
+"@rocketproject/env-util@workspace:packages/env-util":
   version: 0.0.0-use.local
   resolution: "@rocketproject/env-util@workspace:packages/env-util"
   dependencies:
@@ -3793,8 +3824,8 @@ __metadata:
   resolution: "@rocketproject/kv-store@workspace:packages/kv-store"
   dependencies:
     "@repo/eslint-config": "npm:*"
-    "@rocketproject/api-schema": "npm:*"
-    "@rocketproject/env-util": "npm:*"
+    "@rocketproject/api-schema": "npm:latest"
+    "@rocketproject/env-util": "npm:latest"
     redis: "npm:^4.6.14"
     tsup: "npm:^8.0.2"
     typescript: "npm:^5.4.5"
@@ -3802,7 +3833,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@rocketproject/metrics@npm:*, @rocketproject/metrics@workspace:packages/metrics":
+"@rocketproject/metrics@npm:latest":
+  version: 0.0.2
+  resolution: "@rocketproject/metrics@npm:0.0.2"
+  dependencies:
+    express: "npm:^4.19.2"
+    prom-client: "npm:^15.1.2"
+    winston: "npm:^3.13.0"
+    winston-daily-rotate-file: "npm:^5.0.0"
+  checksum: 10/195fd80b8a4eed3e4d34d5889197d323517d4107080ef0a385da4a0af69ea1bcf8ae04fea88fc680854b6228db2ba3d0f9a0e24f5cab9555f29fe0a636d9b769
+  languageName: node
+  linkType: hard
+
+"@rocketproject/metrics@workspace:packages/metrics":
   version: 0.0.0-use.local
   resolution: "@rocketproject/metrics@workspace:packages/metrics"
   dependencies:
@@ -3815,14 +3858,25 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@rocketproject/rest-client@workspace:packages/rest-client":
+  version: 0.0.0-use.local
+  resolution: "@rocketproject/rest-client@workspace:packages/rest-client"
+  dependencies:
+    "@repo/eslint-config": "npm:*"
+    "@rocketproject/api-schema": "npm:latest"
+    tsup: "npm:^8.0.2"
+    zod: "npm:^3.23.8"
+  languageName: unknown
+  linkType: soft
+
 "@rocketproject/rest@workspace:packages/rest":
   version: 0.0.0-use.local
   resolution: "@rocketproject/rest@workspace:packages/rest"
   dependencies:
     "@repo/eslint-config": "npm:*"
-    "@rocketproject/api-schema": "npm:*"
-    "@rocketproject/auth": "npm:*"
-    "@rocketproject/metrics": "npm:*"
+    "@rocketproject/api-schema": "npm:latest"
+    "@rocketproject/auth": "npm:latest"
+    "@rocketproject/metrics": "npm:latest"
     "@types/express-fileupload": "npm:^1.5.0"
     express: "npm:^4.19.2"
     express-fileupload: "npm:^1.5.0"
@@ -3886,8 +3940,8 @@ __metadata:
   resolution: "@rocketproject/wss@workspace:packages/wss"
   dependencies:
     "@repo/eslint-config": "npm:*"
-    "@rocketproject/api-schema": "npm:*"
-    "@rocketproject/metrics": "npm:*"
+    "@rocketproject/api-schema": "npm:latest"
+    "@rocketproject/metrics": "npm:latest"
     "@types/ws": "npm:^8.5.10"
     http: "npm:^0.0.1-security"
     tsup: "npm:^8.0.2"
