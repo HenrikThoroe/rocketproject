@@ -4,5 +4,5 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": "explicit"
   },
-  "conventionalCommits.scopes": ["tsconfig", "global", "eslint", "ui", "ipc"]
+  "conventionalCommits.scopes": ["tsconfig", "global", "eslint", "ui", "ipc", "client"]
 }
