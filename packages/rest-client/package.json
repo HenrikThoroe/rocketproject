@@ -1,0 +1,32 @@
+{
+  "name": "@rocketproject/rest-client",
+  "version": "0.1.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "module": "./dist/index.mjs",
+  "author": "Henrik Thorøe",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenrikThoroe/rocketproject.git",
+    "directory": "packages/rest-client"
+  },
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "yarn build --watch",
+    "prepublish": "yarn build",
+    "lint": "eslint .",
+    "publish-package": "yarn npm publish"
+  },
+  "dependencies": {
+    "@rocketproject/api-schema": "latest",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "*",
+    "tsup": "^8.0.2"
+  }
+}
