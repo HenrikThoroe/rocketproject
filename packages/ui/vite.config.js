@@ -7,11 +7,13 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css'
 export default defineConfig({
   build: {
     rollupOptions: {
-      external: ['react', 'react-dom'],
+      external: ['react', 'react-dom', '@emotion/react', '@emotion/styled'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
+          '@emotion/react': 'emotionReact',
+          '@emotion/styled': 'emotionStyled',
         },
       },
     },

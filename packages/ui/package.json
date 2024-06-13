@@ -5,7 +5,7 @@
     "email": "henrik@thoroee.com",
     "url": "https://github.com/HenrikThoroe"
   },
-  "version": "0.2.5",
+  "version": "0.2.11",
   "type": "module",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
@@ -62,19 +62,17 @@
     "vite-plugin-lib-inject-css": "^2.1.1"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.4",
-    "@emotion/styled": "^11.11.5",
     "@fontsource/inter": "^5.0.18",
     "@headlessui/react": "^2.0.4",
     "@mui/icons-material": "^5.15.18",
     "@mui/material": "^5.15.18",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.13",
-    "classnames": "^2.5.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "classnames": "^2.5.1"
   },
   "peerDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
